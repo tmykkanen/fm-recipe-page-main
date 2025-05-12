@@ -30,8 +30,12 @@
 
 @layer components {
   .base-layout {
-    --max-width: 1180px;
+    --max-width: 736px;
     --padding: 32px;
+
+    @container (min-width: 384px) {
+      --padding: 40px;
+    }
 
     display: grid;
     grid-template-columns:

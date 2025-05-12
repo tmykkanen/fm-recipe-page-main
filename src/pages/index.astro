@@ -12,25 +12,16 @@ import headerImg from "@images/image-omelette.jpeg";
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
 
     <title>Frontend Mentor | Recipe page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
-  <body class="font-outfit text-fm-stone-600">
-    <main>
-      <article class="base-layout">
+  <body class="font-outfit text-fm-stone-600 bg-fm-stone-100">
+    <main class="@container">
+      <article
+        class="base-layout bg-fm-white mx-auto max-w-[736px] @[736px]:rounded-3xl @sm:py-10"
+      >
         <Image
           src={headerImg}
           alt={"picture of an omelette"}
-          class:list={"full-width mx-auto mb-1"}
+          class:list={"full-width mx-auto @sm:col-start-2 @sm:col-end-3 @sm:rounded-xl"}
         />
         <section>
           <h1 class="font-young-serif text-fm-stone-900 mb-6 text-4xl">
@@ -42,7 +33,7 @@ import headerImg from "@images/image-omelette.jpeg";
             your choice of cheese, vegetables, or meats.
           </p>
         </section>
-        <section class="bg-fm-rose-50 rose-colored rounded-md p-6">
+        <section class="bg-fm-rose-50 rose-colored rounded-xl p-6">
           <h3 class="text-fm-rose-800 mb-4 text-xl font-bold">
             Preparation time
           </h3>
@@ -55,7 +46,7 @@ import headerImg from "@images/image-omelette.jpeg";
           </ul>
         </section>
 
-        <section class="border-b-fm-stone-100 border-b pb-8">
+        <section class="border-b-fm-stone-150 border-b pb-8">
           <h2 class="font-young-serif text-fm-brown-800 mb-4 text-2xl">
             Ingredients
           </h2>
@@ -70,7 +61,7 @@ import headerImg from "@images/image-omelette.jpeg";
           </ul>
         </section>
 
-        <section class="border-b-fm-stone-100 border-b pb-8">
+        <section class="border-b-fm-stone-150 border-b pb-8">
           <h2 class="font-young-serif text-fm-brown-800 mb-4 text-2xl">
             Instructions
           </h2>
@@ -147,7 +138,7 @@ import headerImg from "@images/image-omelette.jpeg";
                 <td class="text-fm-brown-800 font-bold">20g</td>
               </tr>
               <tr
-                class="border-fm-stone-150 grid h-full w-full grid-cols-2 border-b py-4"
+                class="border-fm-stone-150 grid h-full w-full grid-cols-2 py-4"
               >
                 <td class="pl-8">Fat</td>
                 <td class="text-fm-brown-800 font-bold">22g</td>
@@ -157,12 +148,16 @@ import headerImg from "@images/image-omelette.jpeg";
         </section>
       </article>
 
-      <footer class="base-layout mt-8">
-        <div class="attribution mx-auto">
+      <footer class="base-layout text-fm-rose-800 my-10">
+        <div class="mx-auto">
           Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            class="underline">Frontend Mentor</a
+          >. Coded by <a href="https://github.com/tmykkanen" class="underline"
+            >Tyler Mykkanen</a
+          >.
         </div>
       </footer>
     </main>
