@@ -30,18 +30,22 @@ import headerImg from "@images/image-omelette.jpeg";
         <Image
           src={headerImg}
           alt={"picture of an omelette"}
-          class:list={"full-width mx-auto"}
+          class:list={"full-width mx-auto mb-1"}
         />
-        <h1 class="font-young-serif text-fm-stone-900 text-4xl">
-          Simple Omelette Recipe
-        </h1>
-        <p>
-          An easy and quick dish, perfect for any meal. This classic omelette
-          combines beaten eggs cooked to perfection, optionally filled with your
-          choice of cheese, vegetables, or meats.
-        </p>
-        <section class="bg-fm-rose-50 rounded-md p-6">
-          <h3 class="text-fm-rose-800 font-bold">Preparation time</h3>
+        <section>
+          <h1 class="font-young-serif text-fm-stone-900 mb-6 text-4xl">
+            Simple Omelette Recipe
+          </h1>
+          <p>
+            An easy and quick dish, perfect for any meal. This classic omelette
+            combines beaten eggs cooked to perfection, optionally filled with
+            your choice of cheese, vegetables, or meats.
+          </p>
+        </section>
+        <section class="bg-fm-rose-50 rose-colored rounded-md p-6">
+          <h3 class="text-fm-rose-800 mb-4 text-xl font-bold">
+            Preparation time
+          </h3>
           <ul>
             <li>
               <span><strong>Total:</strong> Approximately 10 minutes</span>
@@ -52,7 +56,9 @@ import headerImg from "@images/image-omelette.jpeg";
         </section>
 
         <section class="border-b-fm-stone-100 border-b pb-8">
-          <h2 class="font-young-serif text-fm-brown-800">Ingredients</h2>
+          <h2 class="font-young-serif text-fm-brown-800 mb-4 text-2xl">
+            Ingredients
+          </h2>
           <ul>
             <li>2-3 large eggs</li>
             <li>Salt, to taste</li>
@@ -65,7 +71,9 @@ import headerImg from "@images/image-omelette.jpeg";
         </section>
 
         <section class="border-b-fm-stone-100 border-b pb-8">
-          <h2 class="font-young-serif text-fm-brown-800">Instructions</h2>
+          <h2 class="font-young-serif text-fm-brown-800 mb-4 text-2xl">
+            Instructions
+          </h2>
           <ol>
             <li>
               <span>
@@ -75,52 +83,74 @@ import headerImg from "@images/image-omelette.jpeg";
               </span>
             </li>
             <li>
-              Heat the pan: Place a non-stick frying pan over medium heat and
-              add butter or oil.
+              <span>
+                <strong>Heat the pan:</strong> Place a non-stick frying pan over
+                medium heat and add butter or oil.
+              </span>
             </li>
             <li>
-              Cook the omelette: Once the butter is melted and bubbling, pour in
-              the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
+              <span>
+                <strong>Cook the omelette:</strong> Once the butter is melted and
+                bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly
+                coat the surface.
+              </span>
             </li>
             <li>
-              Add fillings (optional): When the eggs begin to set at the edges
-              but are still slightly runny in the middle, sprinkle your chosen
-              fillings over one half of the omelette.
+              <span>
+                <strong>Add fillings (optional):</strong> When the eggs begin to
+                set at the edges but are still slightly runny in the middle, sprinkle
+                your chosen fillings over one half of the omelette.
+              </span>
             </li>
             <li>
-              Fold and serve: As the omelette continues to cook, carefully lift
-              one edge and fold it over the fillings. Let it cook for another
-              minute, then slide it onto a plate.
+              <span>
+                <strong>Fold and serve:</strong> As the omelette continues to cook,
+                carefully lift one edge and fold it over the fillings. Let it cook
+                for another minute, then slide it onto a plate.
+              </span>
             </li>
             <li>
-              Enjoy: Serve hot, with additional salt and pepper if needed.
+              <span
+                ><strong>Enjoy:</strong> Serve hot, with additional salt and pepper
+                if needed.</span
+              >
             </li>
           </ol>
         </section>
 
         <section>
-          <h2 class="font-young-serif text-fm-brown-800">Nutrition</h2>
+          <h2 class="font-young-serif text-fm-brown-800 mb-4 text-2xl">
+            Nutrition
+          </h2>
           <p>
             The table below shows nutritional values per serving without the
             additional fillings.
           </p>
-          <table class="table-auto">
-            <tbody>
-              <tr>
-                <th>Calories</th>
-                <td>277kcal</td>
+          <table class="w-full">
+            <tbody class="">
+              <tr
+                class="border-fm-stone-150 grid h-full w-full grid-cols-2 border-b py-4"
+              >
+                <td class="pl-8">Calories</td>
+                <td class="text-fm-brown-800 font-bold">277kcal</td>
               </tr>
-              <tr>
-                <th>Carbs</th>
-                <td>0g</td>
+              <tr
+                class="border-fm-stone-150 grid h-full w-full grid-cols-2 border-b py-4"
+              >
+                <td class="pl-8">Carbs</td>
+                <td class="text-fm-brown-800 font-bold">0g</td>
               </tr>
-              <tr>
-                <th>Protein</th>
-                <td>20g</td>
+              <tr
+                class="border-fm-stone-150 grid h-full w-full grid-cols-2 border-b py-4"
+              >
+                <td class="pl-8">Protein</td>
+                <td class="text-fm-brown-800 font-bold">20g</td>
               </tr>
-              <tr>
-                <th>Fat</th>
-                <td>22g</td>
+              <tr
+                class="border-fm-stone-150 grid h-full w-full grid-cols-2 border-b py-4"
+              >
+                <td class="pl-8">Fat</td>
+                <td class="text-fm-brown-800 font-bold">22g</td>
               </tr>
             </tbody>
           </table>
@@ -140,28 +170,39 @@ import headerImg from "@images/image-omelette.jpeg";
 </html>
 
 <style>
+  @reference '@styles/global.css';
+
   /* https://css-tricks.com/styling-counters-in-css/ */
+  /*  */
   ul > li {
-    display: flex;
-    align-items: center;
+    @apply flex items-center;
+    /* display: flex; */
+    /* align-items: center; */
   }
   ul > li::before {
     content: "•";
-    font-size: 24px;
-    color: var(--color-fm-brown-800);
-    margin-right: 10px;
+    @apply text-fm-brown-800 mr-6 ml-2 text-2xl;
+    /* font-size: 24px; */
+    /* color: var(--color-fm-brown-800); */
+    /* margin-right: 10px; */
+  }
+
+  .rose-colored > ul > li::before {
+    @apply text-fm-rose-800;
   }
   ol {
     counter-reset: item;
   }
   ol > li {
     counter-increment: item;
-    display: flex;
+    @apply flex;
+    /* display: flex; */
   }
   ol > li::before {
     content: counter(item) ".";
-    margin-right: 10px;
-    color: var(--color-fm-brown-800);
-    font-weight: 900;
+    @apply text-fm-brown-800 mr-6 ml-2 font-bold;
+    /* margin-right: 10px; */
+    /* color: var(--color-fm-brown-800); */
+    /* font-weight: 900; */
   }
 </style>

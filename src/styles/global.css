@@ -39,7 +39,7 @@
       min(var(--max-width), 100% - var(--padding) * 2)
       minmax(var(--padding), 1fr);
 
-    row-gap: 32px;
+    row-gap: 36px;
 
     & > * {
       grid-column: 2 / 3;
