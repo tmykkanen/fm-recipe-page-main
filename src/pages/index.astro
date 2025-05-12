@@ -1,6 +1,7 @@
 ---
 import "@styles/global.css";
 import { Image } from "astro:assets";
+import headerImg from "@images/image-omelette.jpeg";
 ---
 
 <html lang="en">
@@ -8,7 +9,7 @@ import { Image } from "astro:assets";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
 
     <title>Frontend Mentor | Recipe page</title>
 
@@ -23,7 +24,144 @@ import { Image } from "astro:assets";
       }
     </style>
   </head>
-  <body>
-    <h1 class="text-5xl">Astro</h1>
+  <body class="font-outfit text-fm-stone-600">
+    <main>
+      <article class="base-layout">
+        <Image
+          src={headerImg}
+          alt={"picture of an omelette"}
+          class:list={"full-width mx-auto"}
+        />
+        <h1 class="font-young-serif text-fm-stone-900 text-4xl">
+          Simple Omelette Recipe
+        </h1>
+        <p>
+          An easy and quick dish, perfect for any meal. This classic omelette
+          combines beaten eggs cooked to perfection, optionally filled with your
+          choice of cheese, vegetables, or meats.
+        </p>
+        <section class="bg-fm-rose-50 rounded-md p-6">
+          <h3 class="text-fm-rose-800 font-bold">Preparation time</h3>
+          <ul>
+            <li>
+              <span><strong>Total:</strong> Approximately 10 minutes</span>
+            </li>
+            <li><span><strong>Preparation:</strong> 5 minutes</span></li>
+            <li><span><strong>Cooking:</strong> 5 minutes</span></li>
+          </ul>
+        </section>
+
+        <section class="border-b-fm-stone-100 border-b pb-8">
+          <h2 class="font-young-serif text-fm-brown-800">Ingredients</h2>
+          <ul>
+            <li>2-3 large eggs</li>
+            <li>Salt, to taste</li>
+            <li>Pepper, to taste</li>
+            <li>1 tablespoon of butter or oil</li>
+            <li>
+              Optional fillings: cheese, diced vegetables, cooked meats, herbs
+            </li>
+          </ul>
+        </section>
+
+        <section class="border-b-fm-stone-100 border-b pb-8">
+          <h2 class="font-young-serif text-fm-brown-800">Instructions</h2>
+          <ol>
+            <li>
+              <span>
+                <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch
+                of salt and pepper until they are well mixed. You can add a tablespoon
+                of water or milk for a fluffier texture.
+              </span>
+            </li>
+            <li>
+              Heat the pan: Place a non-stick frying pan over medium heat and
+              add butter or oil.
+            </li>
+            <li>
+              Cook the omelette: Once the butter is melted and bubbling, pour in
+              the eggs. Tilt the pan to ensure the eggs evenly coat the surface.
+            </li>
+            <li>
+              Add fillings (optional): When the eggs begin to set at the edges
+              but are still slightly runny in the middle, sprinkle your chosen
+              fillings over one half of the omelette.
+            </li>
+            <li>
+              Fold and serve: As the omelette continues to cook, carefully lift
+              one edge and fold it over the fillings. Let it cook for another
+              minute, then slide it onto a plate.
+            </li>
+            <li>
+              Enjoy: Serve hot, with additional salt and pepper if needed.
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2 class="font-young-serif text-fm-brown-800">Nutrition</h2>
+          <p>
+            The table below shows nutritional values per serving without the
+            additional fillings.
+          </p>
+          <table class="table-auto">
+            <tbody>
+              <tr>
+                <th>Calories</th>
+                <td>277kcal</td>
+              </tr>
+              <tr>
+                <th>Carbs</th>
+                <td>0g</td>
+              </tr>
+              <tr>
+                <th>Protein</th>
+                <td>20g</td>
+              </tr>
+              <tr>
+                <th>Fat</th>
+                <td>22g</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+
+      <footer class="base-layout mt-8">
+        <div class="attribution mx-auto">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
+
+<style>
+  /* https://css-tricks.com/styling-counters-in-css/ */
+  ul > li {
+    display: flex;
+    align-items: center;
+  }
+  ul > li::before {
+    content: "•";
+    font-size: 24px;
+    color: var(--color-fm-brown-800);
+    margin-right: 10px;
+  }
+  ol {
+    counter-reset: item;
+  }
+  ol > li {
+    counter-increment: item;
+    display: flex;
+  }
+  ol > li::before {
+    content: counter(item) ".";
+    margin-right: 10px;
+    color: var(--color-fm-brown-800);
+    font-weight: 900;
+  }
+</style>
